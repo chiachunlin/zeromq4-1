@@ -150,6 +150,8 @@ namespace zmq
             zmq::atomic_counter_t refcnt;
         };
 
+		content_t *content() { return content_; }
+
     	size_t hdr_size() const { return size() - content_->size; }
 
     private:
